@@ -6,6 +6,7 @@
 </head>
 <body>
 	<div id="app">
+		<p>目前已點擊：{{count}} 次</p>
 		<input type="submit" value="立即送出" v-on:click="clickme">
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
@@ -14,9 +15,14 @@
 			
 			el: '#app',
 
+			data:{
+				count:0
+			},
+
 			methods:{
 				clickme: function(){
-					alert('here I am!');
+					//alert('here I am!');
+					this.count +=1;
 				}
 			}
 		});
