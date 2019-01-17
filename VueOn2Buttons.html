@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>3 click</title>
+</head>
+<body>
+	<div id="app">
+		<button v-on:click="handleIt('uh')">I say uh</button>
+		<button v-on:click="handleIt('ah')">You say ah</button>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+	<script>
+		new Vue({
+
+			el: '#app',
+
+			methods:{
+				handleIt: function(msg){
+					alert(msg);
+				}
+			}
+		});
+	</script>
+</body>
+</html>
