@@ -6,13 +6,13 @@
     </head>
     <body>
         <div id="app">
-        	<form action="submit.html" v-on:submit="handleIt">
+        	<form action="submit.html" @submit.prevent="handleIt">
         		<button type="submit">立即送出</button>
         	</form>
         </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
-        <script type="text/javascript">
+        <script>
         	new Vue({
         		el: '#app',
 
